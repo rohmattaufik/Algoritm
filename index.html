@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Kulina - Algoritma</title>
+<link rel='stylesheet' href='./bootstrap.css' />
+<link rel='stylesheet' href='./bootstrap-theme.css' />
+<link rel='stylesheet' href='./jquery-ui-1.10.4.css' />
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+
+<style>
+.nav-tabs > li, .nav-pills > li {
+    float:none;
+    display:inline-block;
+    *display:inline; /* ie7 fix */
+     zoom:1; /* hasLayout ie7 trigger */
+}
+
+.nav-tabs, .nav-pills {
+    text-align:center;
+}
+.hasil{
+	text-align: center;
+	color:chocolate;
+}
+</style>
+
+</head>
+<body>
+
+<header>
+	<!-- Navbar -->
+	<nav class="navbar navbar-default " role="navigation">
+		<div class="container">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">Kulina - Algoritma</a>
+			</div>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav nav-tabs">
+					<li class="active"><a href="#bil_prima" data-toggle="tab">Bilangan Prima</a></li>
+					<li><a href="#bil_fibonacci" data-toggle="tab">Bilangan Fibonacci</a></li>
+					<li><a href="#struktur_angka" data-toggle="tab">Struktur Angka</a></li>
+				</ul>
+
+				<p class="navbar-text navbar-right">By <a href="#" class="navbar-link"><strong>Rohmat Taufik</strong></a></p>
+			</div>
+		</div>
+	</nav>
+</header>
+
+<!-- Tab panes -->
+<div class="tab-content">
+	<div class="tab-pane active" id="bil_prima">
+		<!-- Content -->
+		<section>
+				<div class="container">
+					<!-- Nav tabs -->
+					<ul class="nav nav-tabs">
+						<li class="active"><a href="#is_prima" data-toggle="tab">Apakah Bilangan Prima?</a></li>
+						<li><a href="#urutan_prima" data-toggle="tab">Urutan Bilangan Prima</a></li>
+					</ul>
+					
+					<!-- Tab panes -->
+					<div class="tab-content">
+						<div class="tab-pane active" id="is_prima">
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4>Masukkan sebuah angka, maka sistem akan menentukan apakah bilangan tersebut termasuk bilangan prima atau bukan.</h4>
+								</div>
+								<div class="panel-body">
+									<div class="col-xs-6">
+										<form role="form" id="is_prima_form">
+											<div class="form-group">
+												<label for="is_prima_input">Masukkan Angka</label>
+												<input type="number" class="form-control" id="is_prima_input">
+											</div>
+										</form>
+									</div>
+									<div class="col-xs-6 hasil">
+										<div><h1 id="is_prima_angka"></h1></div>
+										<div><h2 id="is_prima_hasil"></h2></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="tab-pane" id="urutan_prima">
+							<div class="panel panel-default">
+								<div class="panel-heading">
+										<h4>Masukkan sebuah angka, maka sistem akan menuliskan urutan bilangan prima sejumlah angka yang dimasukkan.</h4>
+								</div>
+								<div class="panel-body">
+										<div class="col-xs-6 col-xs-offset-3">
+											<form role="form" id="urutan_prima_form">
+												<div class="form-group">
+													<label for="urutan_prima_input">Masukkan Angka</label>
+													<p>* Masukkan antara 1-1000, Lebih dari 1000 proses tidak dijalankan</p>
+													<input type="number" class="form-control" id="urutan_prima_input">
+												</div>
+											</form>
+										</div>
+										<div class="col-xs-12 hasil">
+											<div><h1 id="urutan_prima_angka"></h1></div>
+											<div><h2 id="urutan_prima_hasil"></h2></div>
+										</div>
+								</div>
+							</div>
+						</div>
+					</div>
+			
+				</div>
+			</section>
+	
+	</div>
+	<div class="tab-pane" id="bil_fibonacci">
+		<!-- Content -->
+		<section id="bil_fibonacci">
+			<div class="container">
+				<!-- Nav tabs -->
+				<ul class="nav nav-tabs">
+					<li class="active"><a href="#urutan_fibonacci" data-toggle="tab">Urutan Bilangan Fibonacci</a></li>
+				</ul>
+				
+				<!-- Tab panes -->
+				<div class="tab-content">
+					<div class="tab-pane active" id="urutan_fibonacci">
+						<div class="panel panel-default">
+							<div class="panel-heading">
+									<h4>Masukkan sebuah angka, maka sistem akan menuliskan urutan bilangan fibonacci sejumlah angka yang dimasukkan.</h4>
+							</div>
+							<div class="panel-body">
+									<div class="col-xs-6 col-xs-offset-3">
+										<form role="form" id="urutan_fibonacci_form">
+											<div class="form-group">
+												<label for="urutan_fibonacci_input">Masukkan Angka</label>
+												<p>* Masukkan antara 3-100, Lebih dari 100 proses tidak dijalankan</p>
+												<input type="number" class="form-control" id="urutan_fibonacci_input">
+											</div>
+										</form>
+									</div>
+									<div class="col-xs-12 hasil">
+										<div><h1 id="urutan_fibonacci_angka"></h1></div>
+										<div><h2 id="urutan_fibonacci_hasil"></h2></div>
+									</div>
+							</div>
+						</div>
+					</div>
+				</div>
+		
+			</div>
+		</section>
+	</div>
+	<div class="tab-pane" id="struktur_angka">
+		<!-- Content -->
+		<section id="struktur_angka">
+			<div class="container">
+				<!-- Nav tabs -->
+				<ul class="nav nav-tabs">
+					<li class="active"><a href="#struktur_angka" data-toggle="tab">Struktur Angka</a></li>
+				</ul>
+				
+				<!-- Tab panes -->
+				<div class="tab-content">
+					<div class="tab-pane active" id="struktur_angka">
+						<div class="panel panel-default">
+							<div class="panel-heading">
+									<h4>Masukkan sebuah angka, maka sistem akan menuliskan struktur dari angka yang dimasukkan.</h4>
+							</div>
+							<div class="panel-body">
+									<div class="col-xs-6 col-xs-offset-3">
+										<form role="form" id="struktur_angka_form">
+											<div class="form-group">
+												<label for="struktur_angka_input">Masukkan Angka</label>
+												<input type="number" class="form-control" id="struktur_angka_input">
+											</div>
+										</form>
+									</div>
+									<div class="col-xs-12 hasil">
+										<div><h1 id="struktur_angka_angka"></h1></div>
+										<div><h2 id="struktur_angka_hasil"></h2></div>
+									</div>
+							</div>
+						</div>
+					</div>
+				</div>
+		
+			</div>
+		</section>
+	</div>
+</div>
+
+
+
+
+	
+
+
+
+<!-- script -->
+<script type='text/javascript' src='./jquery-1.11.1.js'></script>
+<script type='text/javascript' src='./jquery-ui-1.10.4.js'></script>
+<script type='text/javascript' src='./bootstrap.min.js'></script>
+
+<script>
+	$('#is_prima_input').on('input', function(){
+		var angka = $('#is_prima_input').val();
+		var is_prima = "Bilangan Prima";
+		if(angka < 1){
+			var is_prima = "BukanBilangan Prima";
+		} else{
+			for(var i=2; i<angka/2+1; i++){
+				if(Number.isInteger(angka/i)){
+					is_prima = "Bukan Bilangan Prima";
+					break;
+				}
+			}
+		}
+		$('#is_prima_angka').text(angka);
+		$('#is_prima_hasil').text(is_prima);
+	});
+
+	$('#urutan_prima_input').on('input', function(){
+		var angka = $('#urutan_prima_input').val();
+		var urutan_prima = "Urutan Prima : ";
+		var count = 0;
+		if(angka > 0 && angka <= 1000){
+			var number = 1;
+			while( count < angka && number < 100000 ){
+				var is_prima = true;
+				for(var i=2; i<number/2+1; i++){
+					if(Number.isInteger(number/i)){
+						is_prima = false;
+						break;
+					}
+				}	
+				if(is_prima== true){
+					count+=1;
+					console.log(count);
+					urutan_prima += number + ", ";
+				}
+				number++;
+			}
+		}else if(angka>1000){
+			var urutan_prima = "Proses tidak dijalankan";
+		}else{
+			var urutan_prima = "Tidak ada urutan prima";
+		}
+		$('#urutan_prima_angka').text(angka);
+		$('#urutan_prima_hasil').text(urutan_prima);
+	});
+
+
+	$('#urutan_fibonacci_input').on('input', function(){
+		var angka = $('#urutan_fibonacci_input').val();
+		var urutan_fibonacci = "Urutan Fibonacci : 0, 1, ";
+		var count = 2;
+		if(angka > 2 && angka <= 100){
+			var number = 0;
+			var angka1 = 0;
+			var angka2 = 1;
+			while( count < angka ){
+				var next_angka = angka1 + angka2;
+				angka1 = angka2;
+				angka2 = next_angka;
+				urutan_fibonacci += next_angka +", ";
+				count++;
+			}
+		}else if(angka>100){
+			urutan_fibonacci = "Proses tidak dijalankan";
+		}else{
+			urutan_fibonacci = "Tidak ada urutan fibonacci";
+		}
+		$('#urutan_fibonacci_angka').text(angka);
+		$('#urutan_fibonacci_hasil').text(urutan_fibonacci);
+	});
+
+	$('#struktur_angka_input').on('input', function(){
+		var angka = $('#struktur_angka_input').val();
+		var struktur_angka = "Struktur Angka : <br>";
+		if(angka > 0 ){
+			var string = angka.toString();
+			for(var i=0; i<string.length;i++){
+				var ii = string.substring(i,i+1);
+				for(var j=0; j<(string.length-1)-i;j++){
+					ii += "0";
+				}
+				struktur_angka +=  ii + "<br>";
+			}
+		}else if(angka == ""){
+
+		}else{
+			var struktur_angka = "Inputan keliru";
+		}
+		$('#struktur_angka_angka').text(angka);
+		$('#struktur_angka_hasil').html(struktur_angka);
+	});
+</script>
+
+</body>
+</html>
